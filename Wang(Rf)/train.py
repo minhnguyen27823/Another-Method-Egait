@@ -31,7 +31,6 @@ with h5py.File(labels_path, 'r') as labels_file:
                 data_array = df.values  # chuyển về numpy array
                 num_rows = data_array.shape[0]
 
-                # Lấy label (giả sử là scalar)
                 label = labels_file[key][()]
                 if isinstance(label, bytes):
                     label = label.decode()

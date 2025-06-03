@@ -1,14 +1,9 @@
 import numpy as np
-from LSTM.extract_posture_movement import extract_posture_feature
 from extract_posture_movement import extract_posture_feature, compute_movement_features
 import torch
-import h5py
-from sklearn.model_selection import train_test_split
-import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
-from lstm_model import VanillaLSTM
 import get_data
 
 def deepfeatures(model, gait):

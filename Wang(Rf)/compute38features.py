@@ -233,14 +233,20 @@ def compute_high_level_features(joints_t, joints_t1, body_mass, delta_t=1.0/30):
     # Chọn 1 số segment chính (có thể mở rộng nếu cần)
     segments = {
         "head": joints_t[3],
-        "torso": joints_t[1],
+        "neck_and_torso": joints_t[2],
         "upper_arm": joints_t[4],  # left shoulder
-        "lower_arm_hand": joints_t[6],  # left hand
-        "hand": joints_t[6],
-        "thigh": joints_t[11],  # left hip
-        "shank": joints_t[12],  # left knee
-        "foot": joints_t[13],  # left foot
-        "waist": joints_t[1],  # spine
+        "lower_arm_hand": joints_t[5],  # left elbow
+        "hand": joints_t[6], #left hand
+        "thigh": joints_t[10],  # left hip
+        "shank": joints_t[11],  # left knee
+        "foot": joints_t[12],  # left foot
+        "waist": joints_t[1],# spine
+          "thigh": joints_t[13],  # right hip
+        "shank": joints_t[14],  # right knee
+        "foot": joints_t[15],  # right foot  
+         "upper_arm": joints_t[7],  # right shoulder
+        "lower_arm_hand": joints_t[8],  # right elbow
+        "hand": joints_t[9],#right hand
     }
 
     energy = 0
